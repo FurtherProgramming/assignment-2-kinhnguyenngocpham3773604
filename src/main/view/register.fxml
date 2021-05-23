@@ -9,13 +9,13 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="334.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.RegisterController">
+<AnchorPane prefHeight="406.0" prefWidth="372.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.RegisterController">
     <children>
         <Label fx:id="isConnected" layoutX="115.0" layoutY="25.0" text="Register">
 
         </Label>
-        <TextField fx:id="txtUsername" layoutX="78.0" layoutY="62.0" prefHeight="27.0" prefWidth="161.0" promptText="Firstname" AnchorPane.bottomAnchor="246.0" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="61.0" AnchorPane.topAnchor="62.0" />
-        <Button defaultButton="true" layoutX="126.0" layoutY="275.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="57.0" text="Register" textAlignment="CENTER" textFill="#f6f6f6" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="117.0" AnchorPane.topAnchor="275.0">
+        <TextField fx:id="txtFirstName" layoutX="137.0" layoutY="57.0" prefHeight="27.0" prefWidth="161.0" promptText="Firstname" AnchorPane.bottomAnchor="322.0" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="74.0" AnchorPane.topAnchor="57.0" />
+        <Button fx:id="Register" defaultButton="true" layoutX="107.0" layoutY="346.0" mnemonicParsing="false" onAction="#Register" prefHeight="27.0" prefWidth="148.0" text="Register" textAlignment="CENTER" textFill="#f6f6f6" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="117.0" AnchorPane.topAnchor="346.0">
             <effect>
                 <Lighting bumpInput="$null">
                     <light>
@@ -30,9 +30,13 @@
             <font>
                 <Font name="System Font" size="13.0" />
             </font></Button>
-      <TextField fx:id="txtUsername1" layoutX="77.0" layoutY="96.0" prefHeight="27.0" prefWidth="161.0" promptText="Lastname" />
-      <TextField fx:id="txtUsername11" layoutX="77.0" layoutY="132.0" prefHeight="27.0" prefWidth="161.0" promptText="Username" />
-      <TextField fx:id="txtUsername111" layoutX="77.0" layoutY="168.0" prefHeight="27.0" prefWidth="161.0" promptText="password" />
+      <TextField fx:id="txtLastName" layoutX="137.0" layoutY="90.0" prefHeight="27.0" prefWidth="161.0" promptText="Lastname" />
+      <TextField fx:id="txtUsername" layoutX="137.0" layoutY="225.0" prefHeight="27.0" prefWidth="161.0" promptText="Username" />
+      <TextField fx:id="txtPassword" layoutX="137.0" layoutY="259.0" prefHeight="27.0" prefWidth="161.0" promptText="password" />
+      <TextField fx:id="txtPasswordConfirmation" layoutX="137.0" layoutY="297.0" prefHeight="27.0" prefWidth="161.0" promptText="password" />
+      <TextField fx:id="txtQuestion" layoutX="137.0" layoutY="125.0" prefHeight="27.0" prefWidth="161.0" promptText="Question" />
+      <TextField fx:id="txtAnswer" layoutX="137.0" layoutY="159.0" prefHeight="27.0" prefWidth="161.0" promptText="Answer" />
+      <TextField fx:id="txtRole" layoutX="137.0" layoutY="189.0" prefHeight="27.0" prefWidth="161.0" promptText="Role" />
 
 
     </children>

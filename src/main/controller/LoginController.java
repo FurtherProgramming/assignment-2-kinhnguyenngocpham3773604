@@ -76,7 +76,7 @@ public class LoginController implements Initializable {
             System.out.println("Problem when loading FXML file");
         }
         //create new scene to store newly loaded FXML file
-        Scene register = new Scene(root,300, 334);
+        Scene register = new Scene(root,372, 406);
 
         // set the primary stage to next stage
         primaryStage.setScene(register);
@@ -85,11 +85,3 @@ public class LoginController implements Initializable {
         primaryStage.setTitle("Register form");
     }
 }
-
-
-
-
-    //11.2.3 big sur
-
-
-
