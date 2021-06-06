@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="main.view.Booking"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="554.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.view.Booking">
+   <children>
+      <Line endX="-100.0" endY="466.0" layoutX="143.0" layoutY="52.0" startX="-100.0" startY="-21.33333396911621" />
+      <Line endX="143.33331298828125" endY="1.9073486328125E-6" layoutX="144.0" layoutY="30.0" startX="-100.0" />
+      <Line endX="-66.9595947265625" endY="173.0" layoutX="355.0" layoutY="115.0" startX="-66.9595947265625" startY="-85.70710754394531" />
+      <Line endX="401.0" layoutX="145.0" layoutY="519.0" startX="-102.5" startY="-0.5" />
+      <Line endX="158.0" layoutX="389.0" layoutY="289.0" startX="-100.0" />
+      <Line endX="157.5" endY="110.5" layoutX="389.0" layoutY="408.0" startX="158.5" startY="-118.5" />
+      <Line endX="157.66668701171875" endY="2.86102294921875E-6" layoutX="145.0" layoutY="14.0" startX="-115.66665649414062" startY="0.2071075439453125" />
+      <Line endX="168.0" endY="0.166656494140625" layoutX="404.0" layoutY="270.0" startX="-100.0" />
+      <Line endX="100.0" layoutX="471.0" layoutY="531.0" startX="-441.6666564941406" />
+      <Line endX="-105.16665649414062" endY="450.5" layoutX="134.0" layoutY="80.0" startX="-105.16665649414062" startY="-65.29289245605469" />
+      <Line endX="-114.5" endY="169.5" layoutX="418.0" layoutY="100.0" startX="-114.626220703125" startY="-85.08578491210938" />
+      <Line endX="113.5" endY="311.5" layoutX="458.0" layoutY="219.0" startX="113.5" startY="51.666656494140625" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cc018" height="32.0" layoutX="68.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="68.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cc018" height="32.0" layoutX="199.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="68.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cc018" height="68.0" layoutX="52.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="32.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cc018" height="68.0" layoutX="52.0" layoutY="184.0" stroke="BLACK" strokeType="INSIDE" width="32.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cc018" height="68.0" layoutX="52.0" layoutY="260.0" stroke="BLACK" strokeType="INSIDE" width="32.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cc018" height="68.0" layoutX="52.0" layoutY="341.0" stroke="BLACK" strokeType="INSIDE" width="32.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cc018" height="68.0" layoutX="52.0" layoutY="418.0" stroke="BLACK" strokeType="INSIDE" width="32.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cc018" height="32.0" layoutX="122.0" layoutY="479.0" stroke="BLACK" strokeType="INSIDE" width="68.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cc018" height="32.0" layoutX="211.0" layoutY="479.0" stroke="BLACK" strokeType="INSIDE" width="68.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cc018" height="32.0" layoutX="300.0" layoutY="479.0" stroke="BLACK" strokeType="INSIDE" width="68.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cc018" height="32.0" layoutX="288.0" layoutY="312.0" stroke="BLACK" strokeType="INSIDE" width="68.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cc018" height="32.0" layoutX="370.0" layoutY="312.0" stroke="BLACK" strokeType="INSIDE" width="68.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cc018" height="68.0" layoutX="502.0" layoutY="337.0" stroke="BLACK" strokeType="INSIDE" width="32.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cc018" height="68.0" layoutX="502.0" layoutY="414.0" stroke="BLACK" strokeType="INSIDE" width="32.0" />
+      <Label layoutX="152.0" layoutY="34.0" text="3.12m" />
+      <Label layoutX="34.0" layoutY="67.0" rotate="90.0" text="6.92 m" />
+      <Label layoutX="261.0" layoutY="131.0" rotate="90.0" text="3.92 m" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cc018" height="68.0" layoutX="233.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" width="32.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cc018" height="68.0" layoutX="233.0" layoutY="184.0" stroke="BLACK" strokeType="INSIDE" width="32.0" />
+   </children>
 </AnchorPane>

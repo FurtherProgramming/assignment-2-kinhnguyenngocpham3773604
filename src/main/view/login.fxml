@@ -10,14 +10,15 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.LoginController">
+<AnchorPane prefHeight="200.0" prefWidth="379.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.LoginController">
     <children>
-            <Label fx:id="isConnected" layoutX="115.0" layoutY="25.0" text="Login">
-
-            </Label>
-      <TextField fx:id="txtUsername" layoutX="78.0" layoutY="55.0" AnchorPane.bottomAnchor="118.0" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="61.5" AnchorPane.topAnchor="55.0" />
-      <PasswordField fx:id="txtPassword" layoutX="78.0" layoutY="100.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="61.5" AnchorPane.topAnchor="100.0" />
-      <Button defaultButton="true" layoutX="126.0" layoutY="140.0" mnemonicParsing="false" onAction="#Login" prefHeight="27.0" prefWidth="57.0" text="Login" textAlignment="CENTER" textFill="#f6f6f6" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="117.0" AnchorPane.topAnchor="140.0">
+            <Label fx:id="isConnected" layoutX="38.0" layoutY="14.0" text="Login">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <TextField fx:id="txtUsername" layoutX="106.0" layoutY="56.0" prefHeight="27.0" prefWidth="174.0" AnchorPane.bottomAnchor="117.0" AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="99.0" AnchorPane.topAnchor="56.0" />
+      <PasswordField fx:id="txtPassword" layoutX="106.0" layoutY="101.0" prefHeight="27.0" prefWidth="174.0" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="99.0" AnchorPane.topAnchor="101.0" />
+      <Button defaultButton="true" layoutX="126.0" layoutY="140.0" mnemonicParsing="false" onAction="#Login" prefHeight="27.0" prefWidth="79.0" text="Login" textAlignment="CENTER" textFill="#f6f6f6" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="174.0" AnchorPane.topAnchor="140.0">
          <effect>
             <Lighting bumpInput="$null">
                <light>
@@ -38,6 +39,9 @@
             </font>
         </Label>
       <Button fx:id="toRegister" layoutX="222.0" layoutY="141.0" mnemonicParsing="false" onAction="#toRegisterHandler" text="Register" />
+      <Button fx:id="toFindAccount" layoutX="14.0" layoutY="141.0" mnemonicParsing="false" onAction="#toFindAccountHandler" text="Reset Password" />
+      <Label layoutX="51.0" layoutY="61.0" text="Username" />
+      <Label layoutX="51.0" layoutY="106.0" text="Password" />
 
     </children>
 
