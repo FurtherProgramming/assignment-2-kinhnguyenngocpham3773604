@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserTest {
-    public User user = new User();
+    private User user = new User();
     @Test
     void resetPassword() throws SQLException {
         assertTrue(user.resetPassword("2"));

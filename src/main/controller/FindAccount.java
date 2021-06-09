@@ -71,7 +71,7 @@ public class FindAccount {
                     System.out.println("Problem when loading FXML file");
                 }
                 //create new scene to store newly loaded FXML file
-                Scene register = new Scene(root,379, 200);
+                Scene register = new Scene(root,330, 317);
                 // set the primary stage to next stage
                 primaryStage.setScene(register);
 

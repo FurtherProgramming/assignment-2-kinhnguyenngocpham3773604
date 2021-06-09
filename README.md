@@ -1,6 +1,8 @@
 # Readme
 
-This README should be completed by the student
+Name: Kinh Nguyen Ngoc Pham
+
+Student number: 3773604
 
 
 ## Prepare the content

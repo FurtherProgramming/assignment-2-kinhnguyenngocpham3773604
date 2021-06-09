@@ -56,7 +56,34 @@ public class User {
         }
     }
 
-    public Boolean resetPassword(String password) throws SQLException {
+    public Boolean answerConfirmation(String question, String answer)throws SQLException {
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet=null;
+        String query = "select * from employee where question = ? and answer= ?";
+        try {
+
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, question);
+            preparedStatement.setString(2, answer);
+            resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        catch (Exception e)
+        {
+            return false;
+        }finally {
+            preparedStatement.close();
+            resultSet.close();
+        }
+    }
+
+
+        public Boolean resetPassword(String password) throws SQLException {
         PreparedStatement preparedStatement = null;
         Statement stmt = connection.createStatement();
         stmt.execute("UPDATE employee SET password='" + password +"' WHERE username='" + getUserName() + "';");
