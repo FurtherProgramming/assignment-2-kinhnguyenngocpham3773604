@@ -23,20 +23,20 @@
       <Label layoutX="34.0" layoutY="67.0" rotate="90.0" text="6.92 m" />
       <Label layoutX="261.0" layoutY="131.0" rotate="90.0" text="3.92 m" />
       <Button fx:id="table1" layoutX="68.0" layoutY="42.0" mnemonicParsing="false" onAction="#table1Handler" prefHeight="32.0" prefWidth="68.0" />
-      <Button fx:id="table2" layoutX="199.0" layoutY="42.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="68.0" />
-      <Button fx:id="table8" layoutX="118.0" layoutY="479.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="68.0" />
-      <Button fx:id="table9" layoutX="202.0" layoutY="479.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="68.0" />
-      <Button fx:id="table10" layoutX="288.0" layoutY="479.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="68.0" />
-      <Button fx:id="table14" layoutX="288.0" layoutY="312.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="68.0" />
-      <Button fx:id="table13" layoutX="370.0" layoutY="312.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="68.0" />
-      <Button fx:id="table3" layoutX="52.0" layoutY="106.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="32.0" />
-      <Button fx:id="table4" layoutX="52.0" layoutY="184.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="32.0" />
-      <Button fx:id="table5" layoutX="52.0" layoutY="260.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="32.0" />
-      <Button fx:id="table6" layoutX="52.0" layoutY="337.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="32.0" />
-      <Button fx:id="table7" layoutX="52.0" layoutY="414.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="32.0" />
-      <Button fx:id="table16" layoutX="233.0" layoutY="106.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="32.0" />
-      <Button fx:id="table15" layoutX="233.0" layoutY="184.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="32.0" />
-      <Button fx:id="table12" layoutX="502.0" layoutY="337.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="32.0" />
-      <Button fx:id="table11" layoutX="502.0" layoutY="414.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="32.0" />
+      <Button fx:id="table2" layoutX="199.0" layoutY="42.0" mnemonicParsing="false" onAction="#table2Handler" prefHeight="32.0" prefWidth="68.0" />
+      <Button fx:id="table8" layoutX="118.0" layoutY="479.0" mnemonicParsing="false" onAction="#table8Handler" prefHeight="32.0" prefWidth="68.0" />
+      <Button fx:id="table9" layoutX="202.0" layoutY="479.0" mnemonicParsing="false" onAction="#table9Handler" prefHeight="32.0" prefWidth="68.0" />
+      <Button fx:id="table10" layoutX="288.0" layoutY="479.0" mnemonicParsing="false" onAction="#table10Handler" prefHeight="32.0" prefWidth="68.0" />
+      <Button fx:id="table14" layoutX="288.0" layoutY="312.0" mnemonicParsing="false" onAction="#table14Handler" prefHeight="32.0" prefWidth="68.0" />
+      <Button fx:id="table13" layoutX="370.0" layoutY="312.0" mnemonicParsing="false" onAction="#table13Handler" prefHeight="32.0" prefWidth="68.0" />
+      <Button fx:id="table3" layoutX="52.0" layoutY="106.0" mnemonicParsing="false" onAction="#table3Handler" prefHeight="68.0" prefWidth="32.0" />
+      <Button fx:id="table4" layoutX="52.0" layoutY="184.0" mnemonicParsing="false" onAction="#table4Handler" prefHeight="68.0" prefWidth="32.0" />
+      <Button fx:id="table5" layoutX="52.0" layoutY="260.0" mnemonicParsing="false" onAction="#table5Handler" prefHeight="68.0" prefWidth="32.0" />
+      <Button fx:id="table6" layoutX="52.0" layoutY="337.0" mnemonicParsing="false" onAction="#table6Handler" prefHeight="68.0" prefWidth="32.0" />
+      <Button fx:id="table7" layoutX="52.0" layoutY="414.0" mnemonicParsing="false" onAction="#table7Handler" prefHeight="68.0" prefWidth="32.0" />
+      <Button fx:id="table16" layoutX="233.0" layoutY="106.0" mnemonicParsing="false" onAction="#table16Handler" prefHeight="68.0" prefWidth="32.0" />
+      <Button fx:id="table15" layoutX="233.0" layoutY="184.0" mnemonicParsing="false" onAction="#table15Handler" prefHeight="68.0" prefWidth="32.0" />
+      <Button fx:id="table12" layoutX="502.0" layoutY="337.0" mnemonicParsing="false" onAction="#table12Handler" prefHeight="68.0" prefWidth="32.0" />
+      <Button fx:id="table11" layoutX="502.0" layoutY="414.0" mnemonicParsing="false" onAction="#table11Handler" prefHeight="68.0" prefWidth="32.0" />
    </children>
 </AnchorPane>

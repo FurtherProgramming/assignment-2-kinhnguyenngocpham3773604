@@ -8,8 +8,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import main.model.Booking;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class HomeController {
     @FXML private Button toBook;
@@ -69,5 +71,37 @@ public class HomeController {
 
         //set stage to next scene
         primaryStage.setTitle("Login form");
+    }
+
+    @FXML
+    public void cancelBoolHandler(ActionEvent event) throws SQLException {
+
+                Parent root =null;
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/cancelalert.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Cancel Alert");
+                stage.show();
+            }
+
+    @FXML
+    public void profileHandler(ActionEvent event) throws SQLException {
+
+        Parent root =null;
+        try
+        {
+            root = FXMLLoader.load(getClass().getResource("../view/Profile.fxml"));
+        }catch (IOException e){
+            System.out.println("Problem when loading FXML file");
+        }
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.setTitle("Profile");
+        stage.show();
     }
 }

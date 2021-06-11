@@ -2,12 +2,21 @@ package main.model;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import main.SQLConnection;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
 import java.io.IOException;
+import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 import java.util.List;
 
 public class Time {
+    Connection connection;
     private static Time time;
     private String message;
 
@@ -22,7 +31,7 @@ public class Time {
             , "04","05","06","07","08","09","10","11","12","13","14","15","16","17",
             "18","19","20","21","22","23","24");
 
-    private Time() {
+    public Time() {
     }
     public static Time getInstance() {
         if (time == null) {
@@ -63,6 +72,63 @@ public class Time {
         return FXCollections.observableList(getHours());
     }
 
+    public Boolean checkTime(String user) throws SQLException {
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime dateTimeA = LocalDateTime.of(getUserYear(user), getUserMonth(user), getUserDate(user), getUserHour(user), 0, 0, 0);
+        long hours = ChronoUnit.HOURS.between(dateTimeA, now);
+        if(hours<48)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public int getUserDate(String user) throws SQLException {
+        connection = SQLConnection.connect();
+        Statement stmt = connection.createStatement();
+        ResultSet rs=stmt.executeQuery("SELECT date FROM book where username='"+user+"';");
+        String result = "";
+        while (rs.next()) {
+            result =rs.getString(1);
+        }
+        int date = Integer.parseInt(result);
+        return date;
+    }
+    public int getUserMonth(String user) throws SQLException {
+        connection = SQLConnection.connect();
+        Statement stmt = connection.createStatement();
+        ResultSet rs=stmt.executeQuery("SELECT month FROM book where username='"+user+"';");
+        String result = "";
+        while (rs.next()) {
+            result =rs.getString(1);
+        }
+        int month = Integer.parseInt(result);
+        return month;
+    }
+    public int getUserYear(String user) throws SQLException {
+        connection = SQLConnection.connect();
+        Statement stmt = connection.createStatement();
+        ResultSet rs=stmt.executeQuery("SELECT year FROM book where username='"+user+"';");
+        String result = "";
+        while (rs.next()) {
+            result =rs.getString(1);
+        }
+        int year = Integer.parseInt(result);
+        return year;
+    }
+    public int getUserHour(String user) throws SQLException {
+        connection = SQLConnection.connect();
+        Statement stmt = connection.createStatement();
+        ResultSet rs=stmt.executeQuery("SELECT hour FROM book where username='"+user+"';");
+        String result = "";
+        while (rs.next()) {
+            result =rs.getString(1);
+        }
+        int hour = Integer.parseInt(result);
+        return hour;
+    }
     public String getMessage() {
         return this.message;
     }

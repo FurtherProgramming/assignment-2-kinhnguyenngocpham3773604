@@ -82,4 +82,64 @@ public class Booking {
             resultSet.close();
         }
     }
+
+    public boolean cancelBooking(String user) throws SQLException {
+        PreparedStatement preparedStatement = null;
+        Statement stmt = connection.createStatement();
+        String updateState = "vacant";
+        stmt.execute("UPDATE book SET state='"+updateState +"' WHERE username ='" +user+"';");
+        stmt.execute(" UPDATE book SET date ="+0 +" WHERE username ='" +user+"';");
+        stmt.execute(" UPDATE book SET month ="+0 +" WHERE username ='" +user+"';");
+        stmt.execute(" UPDATE book SET year ="+0 +" WHERE username ='" +user+"';");
+        stmt.execute(" UPDATE book SET hour ="+0 +" WHERE username ='" +user+"';");
+        stmt.execute(" UPDATE book SET username ='"+""+"' WHERE username ='" +user+"';");
+        ResultSet resultSet=null;
+        String query =  "select * from book where state = ?";
+        try {
+
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, updateState);
+            resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        catch (Exception e)
+        {
+            return false;
+        }finally {
+            preparedStatement.close();
+            resultSet.close();
+        }
+    }
+
+    public Boolean alreadyBooked(String user) throws SQLException {
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet=null;
+        String query = "select * from book where username = ?";
+        try {
+
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, user);
+
+            resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        catch (Exception e)
+        {
+            return false;
+        }finally {
+            preparedStatement.close();
+            resultSet.close();
+        }
+
+    }
 }

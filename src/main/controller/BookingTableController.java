@@ -2,9 +2,12 @@ package main.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 import main.model.Booking;
+import main.model.Session;
 import main.model.Time;
 import main.model.User;
 
@@ -13,6 +16,7 @@ import java.sql.SQLException;
 
 public class BookingTableController {
     public Booking book = new Booking();
+
     @FXML
     private ComboBox<String> dateComboBox;
     @FXML private ComboBox<String> monthComboBox;
@@ -36,13 +40,19 @@ public class BookingTableController {
         }
     }
 
+
     public void Booking(ActionEvent event){
 
         try {
-            if (book.booking(dateComboBox.getValue(),monthComboBox.getValue()
+            if(book.alreadyBooked(Session.getCurrentUser()))
+            {
+                label.setText("User have already booked a place");
+            }
+            else if (book.booking(dateComboBox.getValue(),monthComboBox.getValue()
             ,yearComboBox.getValue(),hourComboBox.getValue())){
                 label.setText("successfully");
-            }else{
+            }
+            else{
                 label.setText("Failed");
             }
         } catch (SQLException e) {

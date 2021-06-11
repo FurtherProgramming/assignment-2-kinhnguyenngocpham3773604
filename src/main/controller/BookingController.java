@@ -101,18 +101,340 @@ public class BookingController {
 
     }
     @FXML
-    public void table1Handler(ActionEvent event){
-        Booking.setTableID(1);
-        Parent root =null;
-        try
-        {
-            root = FXMLLoader.load(getClass().getResource("../view/bookTable.fxml"));
-        }catch (IOException e){
-            System.out.println("Problem when loading FXML file");
+    public void table1Handler(ActionEvent event) throws SQLException {
+        try{
+            if(Booking.getBookState(1).equals("vacant")){
+                Booking.setTableID(1);
+                Parent root =null;
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/bookTable.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Booking form");
+                stage.show();
+            }
+        }catch (SQLException e){
+            e.getStackTrace();
         }
-        Stage stage = new Stage();
-        stage.setScene(new Scene(root));
-        stage.setTitle("Booking form");
-        stage.show();
     }
+    @FXML
+    public void table2Handler(ActionEvent event) throws SQLException {
+        try{
+            if(Booking.getBookState(2).equals("vacant")){
+                Booking.setTableID(2);
+                Parent root =null;
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/bookTable.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Booking form");
+                stage.show();
+            }
+        }catch (SQLException e){
+            e.getStackTrace();
+        }
+    }
+    @FXML
+    public void table3Handler(ActionEvent event) throws SQLException {
+        try{
+            if(Booking.getBookState(3).equals("vacant")){
+                Booking.setTableID(3);
+                Parent root =null;
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/bookTable.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Booking form");
+                stage.show();
+            }
+        }catch (SQLException e){
+            e.getStackTrace();
+        }
+    }
+    @FXML
+    public void table4Handler(ActionEvent event) throws SQLException {
+        try{
+            if(Booking.getBookState(4).equals("vacant")){
+                Booking.setTableID(4);
+                Parent root =null;
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/bookTable.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Booking form");
+                stage.show();
+            }
+        }catch (SQLException e){
+            e.getStackTrace();
+        }
+    }
+    @FXML
+    public void table5Handler(ActionEvent event) throws SQLException {
+        try{
+            if(Booking.getBookState(5).equals("vacant")){
+                Booking.setTableID(5);
+                Parent root =null;
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/bookTable.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Booking form");
+                stage.show();
+            }
+        }catch (SQLException e){
+            e.getStackTrace();
+        }
+    }
+    @FXML
+    public void table6Handler(ActionEvent event) throws SQLException {
+        try{
+            if(Booking.getBookState(6).equals("vacant")){
+                Booking.setTableID(6);
+                Parent root =null;
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/bookTable.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Booking form");
+                stage.show();
+            }
+        }catch (SQLException e){
+            e.getStackTrace();
+        }
+    }
+    @FXML
+    public void table7Handler(ActionEvent event) throws SQLException {
+        try{
+            if(Booking.getBookState(7).equals("vacant")){
+                Booking.setTableID(7);
+                Parent root =null;
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/bookTable.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Booking form");
+                stage.show();
+            }
+        }catch (SQLException e){
+            e.getStackTrace();
+        }
+    }
+    @FXML
+    public void table8Handler(ActionEvent event) throws SQLException {
+        try{
+            if(Booking.getBookState(8).equals("vacant")){
+                Booking.setTableID(8);
+                Parent root =null;
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/bookTable.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Booking form");
+                stage.show();
+            }
+        }catch (SQLException e){
+            e.getStackTrace();
+        }
+    }
+    @FXML
+    public void table9Handler(ActionEvent event) throws SQLException {
+        try{
+            if(Booking.getBookState(9).equals("vacant")){
+                Booking.setTableID(9);
+                Parent root =null;
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/bookTable.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Booking form");
+                stage.show();
+            }
+        }catch (SQLException e){
+            e.getStackTrace();
+        }
+    }
+    @FXML
+    public void table10Handler(ActionEvent event) throws SQLException {
+        try{
+            if(Booking.getBookState(10).equals("vacant")){
+                Booking.setTableID(10);
+                Parent root =null;
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/bookTable.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Booking form");
+                stage.show();
+            }
+        }catch (SQLException e){
+            e.getStackTrace();
+        }
+    }
+    @FXML
+    public void table11Handler(ActionEvent event) throws SQLException {
+        try{
+            if(Booking.getBookState(11).equals("vacant")){
+                Booking.setTableID(11);
+                Parent root =null;
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/bookTable.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Booking form");
+                stage.show();
+            }
+        }catch (SQLException e){
+            e.getStackTrace();
+        }
+    }
+    @FXML
+    public void table12Handler(ActionEvent event) throws SQLException {
+        try{
+            if(Booking.getBookState(12).equals("vacant")){
+                Booking.setTableID(12);
+                Parent root =null;
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/bookTable.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Booking form");
+                stage.show();
+            }
+        }catch (SQLException e){
+            e.getStackTrace();
+        }
+    }
+    @FXML
+    public void table13Handler(ActionEvent event) throws SQLException {
+        try{
+            if(Booking.getBookState(13).equals("vacant")){
+                Booking.setTableID(13);
+                Parent root =null;
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/bookTable.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Booking form");
+                stage.show();
+            }
+        }catch (SQLException e){
+            e.getStackTrace();
+        }
+    }
+    @FXML
+    public void table14Handler(ActionEvent event) throws SQLException {
+        try{
+            if(Booking.getBookState(14).equals("vacant")){
+                Booking.setTableID(14);
+                Parent root =null;
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/bookTable.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Booking form");
+                stage.show();
+            }
+        }catch (SQLException e){
+            e.getStackTrace();
+        }
+    }
+    @FXML
+    public void table15Handler(ActionEvent event) throws SQLException {
+        try{
+            if(Booking.getBookState(15).equals("vacant")){
+                Booking.setTableID(15);
+                Parent root =null;
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/bookTable.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Booking form");
+                stage.show();
+            }
+        }catch (SQLException e){
+            e.getStackTrace();
+        }
+    }
+    @FXML
+    public void table16Handler(ActionEvent event) throws SQLException {
+        try{
+            if(Booking.getBookState(16).equals("vacant")){
+                Booking.setTableID(16);
+                Parent root =null;
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/bookTable.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Booking form");
+                stage.show();
+            }
+        }catch (SQLException e){
+            e.getStackTrace();
+        }
+    }
+
 }
