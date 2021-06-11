@@ -38,5 +38,9 @@
       <Button fx:id="table15" layoutX="233.0" layoutY="184.0" mnemonicParsing="false" onAction="#table15Handler" prefHeight="68.0" prefWidth="32.0" />
       <Button fx:id="table12" layoutX="502.0" layoutY="337.0" mnemonicParsing="false" onAction="#table12Handler" prefHeight="68.0" prefWidth="32.0" />
       <Button fx:id="table11" layoutX="502.0" layoutY="414.0" mnemonicParsing="false" onAction="#table11Handler" prefHeight="68.0" prefWidth="32.0" />
+      <Button fx:id="backHome" layoutX="524.0" layoutY="21.0" mnemonicParsing="false" onAction="#backHomeHandler" text="Home" />
+      <Label layoutX="322.0" layoutY="49.0" text="Green means vacant place can book" textFill="#10e625" />
+      <Label layoutX="322.0" layoutY="74.0" text="Red means already booked" textFill="#ef0404" />
+      <Label layoutX="322.0" layoutY="98.0" text="Orange means locked place due to COVID" textFill="#fb6400" />
    </children>
 </AnchorPane>

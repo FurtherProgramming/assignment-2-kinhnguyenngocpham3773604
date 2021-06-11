@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 import main.model.Booking;
 import main.model.SecretQuestion;
 import main.model.Time;
@@ -32,7 +33,8 @@ public class BookingController {
     @FXML private Button table14;
     @FXML private Button table15;
     @FXML private Button table16;
-
+    @FXML
+    private Button backHome;
 
 
     @FXML public void initialize() {
@@ -437,4 +439,29 @@ public class BookingController {
         }
     }
 
+    @FXML
+    public void backHomeHandler(ActionEvent event) {
+        Scene scene = backHome.getScene();
+        // from scene get window
+        Window window = scene.getWindow();
+        //treat the window as the primary stage by doing type casting
+        Stage primaryStage = (Stage) window;
+
+        Parent root = null;
+        // load nextScence
+        try {
+            root = FXMLLoader.load(getClass().getResource("../view/home.fxml"));
+        } catch (IOException e) {
+            System.out.println("Problem when loading FXML file");
+        }
+
+
+        //create new scene to store newly loaded FXML file
+        Scene register = new Scene(root, 379, 200);
+        // set the primary stage to next stage
+        primaryStage.setScene(register);
+
+        //set stage to next scene
+        primaryStage.setTitle("Home");
+    }
 }

@@ -45,7 +45,7 @@ public class Booking {
         tableID=id;
     }
 
-    public Boolean booking(String date,String month, String year,String hour) throws SQLException {
+    public Boolean toBooking(String date, String month, String year, String hour) throws SQLException {
         PreparedStatement preparedStatement = null;
         Statement stmt = connection.createStatement();
         int intDate= Integer.parseInt(date);

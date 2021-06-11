@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 import main.model.LoginModel;
 import main.model.Session;
+import main.model.User;
 
 import java.io.IOException;
 import java.net.URL;
@@ -22,6 +23,7 @@ import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
     public LoginModel loginModel = new LoginModel();
+    public User user = new User();
     @FXML
     private Label isConnected;
     @FXML
@@ -60,11 +62,18 @@ public class LoginController implements Initializable {
 
                 Parent root =null;
                 // load nextScence
-                try
-                {
-                    root = FXMLLoader.load(getClass().getResource("../view/home.fxml"));
-                }catch (IOException e){
-                    System.out.println("Problem when loading FXML file");
+                if(user.getUserRole(txtUsername.getText()).equals("employee")) {
+                    try {
+                        root = FXMLLoader.load(getClass().getResource("../view/home.fxml"));
+                    } catch (IOException e) {
+                        System.out.println("Problem when loading FXML file");
+                    }
+                }else{
+                    try {
+                        root = FXMLLoader.load(getClass().getResource("../view/admin.fxml"));
+                    } catch (IOException e) {
+                        System.out.println("Problem when loading FXML file");
+                    }
                 }
                 //create new scene to store newly loaded FXML file
                 Scene register = new Scene(root,379, 200);

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="406.0" prefWidth="372.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.AdminUpdateController">
+    <children>
+        <Label fx:id="isRegister" layoutX="115.0" layoutY="25.0" text="Update Account">
+
+        </Label>
+        <TextField fx:id="txtFirstName" layoutX="137.0" layoutY="57.0" prefHeight="27.0" prefWidth="161.0" promptText="Firstname" AnchorPane.bottomAnchor="322.0" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="74.0" AnchorPane.topAnchor="57.0" />
+        <Button fx:id="Register" defaultButton="true" layoutX="107.0" layoutY="346.0" mnemonicParsing="false" onAction="#Register" prefHeight="27.0" prefWidth="148.0" text="Update" textAlignment="CENTER" textFill="#f6f6f6" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="117.0" AnchorPane.topAnchor="346.0">
+            <effect>
+                <Lighting bumpInput="$null">
+                    <light>
+                        <Light.Distant>
+                            <color>
+                                <Color red="0.9342105388641357" green="0.025950292125344276" blue="0.025950292125344276" />
+                            </color>
+                        </Light.Distant>
+                    </light>
+                </Lighting>
+            </effect>
+            <font>
+                <Font name="System Font" size="13.0" />
+            </font></Button>
+        <TextField fx:id="txtLastName" layoutX="137.0" layoutY="90.0" prefHeight="27.0" prefWidth="161.0" promptText="Lastname" />
+        <TextField fx:id="txtUsername" layoutX="137.0" layoutY="225.0" prefHeight="27.0" prefWidth="161.0" promptText="Username" />
+        <ComboBox fx:id="questionComboBox" layoutX="137.0" layoutY="125.0" prefHeight="25.0" prefWidth="161.0" />
+        <TextField fx:id="txtAnswer" layoutX="137.0" layoutY="159.0" prefHeight="27.0" prefWidth="161.0" promptText="Answer" />
+        <ComboBox fx:id="roleComboBox" layoutX="137.0" layoutY="190.0" prefHeight="25.0" prefWidth="161.0" />
+        <PasswordField fx:id="txtPassword" layoutX="137.0" layoutY="261.0" prefHeight="25.0" prefWidth="161.0" promptText="password" />
+        <PasswordField fx:id="txtPasswordConfirmation" layoutX="137.0" layoutY="295.0" prefHeight="25.0" prefWidth="161.0" promptText="password confirmation" />
+        <Button fx:id="cancel" layoutX="29.0" layoutY="347.0" mnemonicParsing="false" onAction="#backLoginHandler" text="Cancel" />
+        <Label layoutX="41.0" layoutY="62.0" text="Firstname:" />
+        <Label layoutX="41.0" layoutY="95.0" text="Lastname:" />
+        <Label layoutX="41.0" layoutY="129.0" text="Secret question:" />
+        <Label layoutX="41.0" layoutY="164.0" text="Answer:" />
+        <Label layoutX="41.0" layoutY="194.0" text="Role:" />
+        <Label layoutX="41.0" layoutY="230.0" text="Username:" />
+        <Label layoutX="41.0" layoutY="265.0" text="Password:" />
+        <Label layoutX="41.0" layoutY="299.0" text="Confirmation:" />
+
+
+    </children>
+
+</AnchorPane>

@@ -2,14 +2,11 @@ package main.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.stage.Stage;
 import main.model.Booking;
 import main.model.Session;
 import main.model.Time;
-import main.model.User;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -48,7 +45,7 @@ public class BookingTableController {
             {
                 label.setText("User have already booked a place");
             }
-            else if (book.booking(dateComboBox.getValue(),monthComboBox.getValue()
+            else if (book.toBooking(dateComboBox.getValue(),monthComboBox.getValue()
             ,yearComboBox.getValue(),hourComboBox.getValue())){
                 label.setText("successfully");
             }

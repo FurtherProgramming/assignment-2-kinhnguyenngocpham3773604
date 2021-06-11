@@ -15,8 +15,6 @@ import java.sql.SQLException;
 
 public class HomeController {
     @FXML private Button toBook;
-    @FXML private Button cancelBook;
-    @FXML private Button profile;
     @FXML private Button logout;
 
     @FXML

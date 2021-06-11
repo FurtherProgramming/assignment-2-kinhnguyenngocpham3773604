@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="main.view.Admin"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="200.0" prefWidth="379.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.AdminController">
+    <children>
+        <Label fx:id="isConnected" layoutX="38.0" layoutY="14.0" text="Admin Home Page">
+            <font>
+                <Font size="20.0" />
+            </font></Label>
+        <Label layoutX="117.0" layoutY="36.0">
+            <font>
+                <Font size="28.0" />
+            </font>
+        </Label>
+        <Button fx:id="profile" layoutX="257.0" layoutY="43.0" mnemonicParsing="false" onAction="#profileHandler" text="Profile" />
+        <Button fx:id="toBook" layoutX="16.0" layoutY="43.0" mnemonicParsing="false" onAction="#toBookHandler" text="Book" />
+        <Button fx:id="cancelBook" layoutX="59.0" layoutY="43.0" mnemonicParsing="false" onAction="#cancelBoolHandler" text="Cancel Book" />
+        <Button fx:id="logout" layoutX="307.0" layoutY="43.0" mnemonicParsing="false" onAction="#Logout" text="Log out" />
+        <Label layoutX="59.0" layoutY="92.0" text="Welcome">
+            <font>
+                <Font size="60.0" />
+            </font>
+        </Label>
+      <Button fx:id="toRegister" layoutX="16.0" layoutY="75.0" mnemonicParsing="false" onAction="#toRegisterHandler" text="Add User" />
+      <Button fx:id="toDeleteAccount" layoutX="81.0" layoutY="75.0" mnemonicParsing="false" onAction="#toDeleteAccountHandler" text="Delete User" />
+      <Button fx:id="toUpdateAccount" layoutX="158.0" layoutY="75.0" mnemonicParsing="false" onAction="#toUpdateaccountHandler" text="Update User" />
+
+    </children>
 
 </AnchorPane>

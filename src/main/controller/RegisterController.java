@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.Window;
@@ -23,10 +24,13 @@ import java.util.ResourceBundle;
 
 public class RegisterController {
     private RegisterModel registerModel = new RegisterModel();
+    private User user = new User();
     @FXML
     private TextField txtUsername;
     @FXML
     private TextField txtPassword;
+    @FXML
+    private TextField txtPasswordConfirmation;
     @FXML
     private TextField txtFirstName;
     @FXML
@@ -36,7 +40,8 @@ public class RegisterController {
     @FXML private Button cancel;
     @FXML private ComboBox<String> questionComboBox;
     @FXML private ComboBox<String> roleComboBox;
-
+    @FXML
+    private Label isRegister;
     @FXML public void initialize() {
         try {
             questionComboBox.setItems(SecretQuestion.getInstance().getComboxItems());
@@ -52,8 +57,18 @@ public class RegisterController {
     public void Register(ActionEvent event) {
 //(username,password,question,answer,role,first_name,last_name)
         try {
-            registerModel.isRegister(txtUsername.getText(), txtPassword.getText(), questionComboBox.getValue()
-                    , txtAnswer.getText(),roleComboBox.getValue(), txtFirstName.getText(), txtLastName.getText());
+            if(!user.passwordConfirmation(txtPassword.getText(),txtPasswordConfirmation.getText())){
+                  isRegister.setText("password not match");
+            }else if(txtPassword.getText().equals("")||txtAnswer.getText().equals("")||txtFirstName.getText().equals("")||
+            txtLastName.getText().equals("")||txtUsername.getText().equals(""))
+            {
+                isRegister.setText("You have to fill all of the information");
+            }else{
+                registerModel.isRegister(txtUsername.getText(), txtPassword.getText(), questionComboBox.getValue()
+                        , txtAnswer.getText(),roleComboBox.getValue(), txtFirstName.getText(), txtLastName.getText());
+
+            }
+
         } catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException e) {
             e.printStackTrace();
         }
