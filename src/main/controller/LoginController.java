@@ -13,6 +13,7 @@ import javafx.event.ActionEvent;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import main.model.LoginModel;
+import main.model.Session;
 
 import java.io.IOException;
 import java.net.URL;
@@ -48,7 +49,7 @@ public class LoginController implements Initializable {
 
         try {
             if (loginModel.isLogin(txtUsername.getText(),txtPassword.getText())){
-
+                Session.setCurrentUser(txtUsername.getText());
                 isConnected.setText("Logged in successfully");
                 //from button get scence
                 Scene scene = Login.getScene();
@@ -66,7 +67,7 @@ public class LoginController implements Initializable {
                     System.out.println("Problem when loading FXML file");
                 }
                 //create new scene to store newly loaded FXML file
-                Scene register = new Scene(root,330, 317);
+                Scene register = new Scene(root,379, 200);
                 // set the primary stage to next stage
                 primaryStage.setScene(register);
 

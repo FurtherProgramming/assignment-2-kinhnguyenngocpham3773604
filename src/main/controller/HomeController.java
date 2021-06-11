@@ -43,4 +43,31 @@ public class HomeController {
         //set stage to next scene
         primaryStage.setTitle("Register form");
     }
+
+    @FXML
+    public void Logout(ActionEvent event){
+        //from button get scence
+        Scene scene = logout.getScene();
+        // from scene get window
+        Window window = scene.getWindow();
+        //treat the window as the primary stage by doing type casting
+        Stage primaryStage = (Stage) window;
+
+        Parent root =null;
+        // load nextScence
+        try
+        {
+            root = FXMLLoader.load(getClass().getResource("../view/login.fxml"));
+        }catch (IOException e){
+            System.out.println("Problem when loading FXML file");
+        }
+        //create new scene to store newly loaded FXML file
+        Scene register = new Scene(root,379, 200);
+
+        // set the primary stage to next stage
+        primaryStage.setScene(register);
+
+        //set stage to next scene
+        primaryStage.setTitle("Login form");
+    }
 }
