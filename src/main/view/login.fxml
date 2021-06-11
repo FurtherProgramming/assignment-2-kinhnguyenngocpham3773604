@@ -18,7 +18,7 @@
          </font></Label>
       <TextField fx:id="txtUsername" layoutX="106.0" layoutY="56.0" prefHeight="27.0" prefWidth="174.0" AnchorPane.bottomAnchor="117.0" AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="99.0" AnchorPane.topAnchor="56.0" />
       <PasswordField fx:id="txtPassword" layoutX="106.0" layoutY="101.0" prefHeight="27.0" prefWidth="174.0" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="99.0" AnchorPane.topAnchor="101.0" />
-      <Button defaultButton="true" layoutX="126.0" layoutY="140.0" mnemonicParsing="false" onAction="#Login" prefHeight="27.0" prefWidth="79.0" text="Login" textAlignment="CENTER" textFill="#f6f6f6" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="174.0" AnchorPane.topAnchor="140.0">
+      <Button fx:id="Login" defaultButton="true" layoutX="126.0" layoutY="140.0" mnemonicParsing="false" onAction="#Login" prefHeight="27.0" prefWidth="79.0" text="Login" textAlignment="CENTER" textFill="#f6f6f6" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="174.0" AnchorPane.topAnchor="140.0">
          <effect>
             <Lighting bumpInput="$null">
                <light>

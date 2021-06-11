@@ -5,8 +5,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 
-
-<AnchorPane prefHeight="554.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.view.Booking">
+<AnchorPane prefHeight="554.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.BookingController">
    <children>
       <Line endX="-100.0" endY="466.0" layoutX="143.0" layoutY="52.0" startX="-100.0" startY="-21.33333396911621" />
       <Line endX="143.33331298828125" endY="1.9073486328125E-6" layoutX="144.0" layoutY="30.0" startX="-100.0" />

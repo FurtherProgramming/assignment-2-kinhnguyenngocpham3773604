@@ -27,6 +27,7 @@ public class LoginController implements Initializable {
     private TextField txtUsername;
     @FXML
     private TextField txtPassword;
+    @FXML private Button Login;
     @FXML private Button toRegister;
     @FXML private Button toFindAccount;
 
@@ -49,6 +50,28 @@ public class LoginController implements Initializable {
             if (loginModel.isLogin(txtUsername.getText(),txtPassword.getText())){
 
                 isConnected.setText("Logged in successfully");
+                //from button get scence
+                Scene scene = Login.getScene();
+                // from scene get window
+                Window window = scene.getWindow();
+                //treat the window as the primary stage by doing type casting
+                Stage primaryStage = (Stage) window;
+
+                Parent root =null;
+                // load nextScence
+                try
+                {
+                    root = FXMLLoader.load(getClass().getResource("../view/home.fxml"));
+                }catch (IOException e){
+                    System.out.println("Problem when loading FXML file");
+                }
+                //create new scene to store newly loaded FXML file
+                Scene register = new Scene(root,330, 317);
+                // set the primary stage to next stage
+                primaryStage.setScene(register);
+
+                //set stage to next scene
+                primaryStage.setTitle("Home");
             }else{
                 isConnected.setText("username and password is incorrect");
             }
